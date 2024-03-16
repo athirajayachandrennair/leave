@@ -1,0 +1,50 @@
+<style>
+    body{
+        background-color: blueviolet;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      
+      form{
+        border-radius: 10px;
+        background: rgba(252, 252, 252, 0.6);
+        width: 8cm;
+        padding-left: 40px;
+        margin:auto;
+        position: relative;
+        top:200px
+      }
+      label{
+        color: brown;
+        
+      }
+      
+    
+      
+      
+     
+    
+          </style>
+    
+    <html>
+        <body>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+    
+    
+                
+                    <label class="label"><b>{{cr.name}} {{cr.lname}}</b></label>
+                    <br><br><br>
+                    <label for="">NAME : {{cr.name}} {{cr.lname}}</label><br>
+                    <label for="">EMAIL : {{cr.email}}</label><br>
+                    <label for="">AGE : {{cr.age}}</label><br>
+                    <label for="">DEPARTMENT : {{cr.department}}</label><br>
+                    <label for="">Gender: {{cr.gender}}</label><br>
+                    <label for="">password: {{cr.password}}</label><br>
+                    
+                    
+                </div>
+            </form>
+        </body>
+    </html>

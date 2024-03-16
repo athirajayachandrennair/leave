@@ -1,0 +1,74 @@
+<style>
+    body{
+      background-color: rgb(106, 103, 31);
+    }
+      table{
+       font-family: Arial, Helvetica, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+     }
+  
+     td {
+    text-align: center;
+  }
+  
+  
+      th{
+       border: 1px solid #ddd;
+       padding: 8px;
+       text-align: center;
+       
+     }
+     
+     tr:nth-child(even) {background-color: #f2f2f2;}
+     
+     tr:hover {background-color: #ddd;}
+     
+     th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: center;
+       background-color: #f0e964af;
+       color: rgb(4, 4, 4);
+     }
+     h1{
+      text-align: center;
+      color: rgb(223, 224, 206);
+     }
+     </style>
+  <html>
+      <body>
+        <h1></h1><br><br>
+          <form method="POST" enctype="multipart/form-data">
+          <table><tr>
+              <th> order no</th>
+              <th>PRODUCT</th>
+              <th>price</th>
+              <th>PRODUCT NO</th>
+              <th>NAME</th>
+              <th>ADDRESS</th>
+              <th>PIN</th>
+              <th>PAYMENT</th>
+              
+   
+  
+              </tr>
+              {% for i in cr %}
+              <tr>
+                  <td>{{ forloop.counter }}</td>
+                  <td>{{ i.name}}</td>
+                  <td>{{ i.price}}</td>
+                  <td>{{ i.orid}}</td>
+                  <td>{{ i.orn}}</td>
+                  <td>{{ i.add}}</td>
+                  <td>{{ i.pin}}</td>
+                  <td>{{ i.pay}}</td>
+                  
+                  
+                  
+              </tr>
+              {% endfor %}
+          </table>
+      </form>
+      </body>
+  </html>

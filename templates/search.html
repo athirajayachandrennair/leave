@@ -1,0 +1,23 @@
+<style>
+    h2{
+        text-align: center;
+    }
+</style>
+<a href="/show/" class="">BACK</a>
+
+{% if post %}
+
+
+{% for i in post %}
+<form action="" method="POST" enctype="multipart/form-data"></form>
+{% csrf_token %}
+<h2>
+    <img src="{{ i.image.url }}" alt='' width='100' height="50%" alt="Nature" style="width:100%">
+<br>NAME:   {{i.name}}<br>PRICE:   {{i.price}}<br>WEIGHT:   {{i.gram}}<br>MODEL:  {{i.mod}} <br><br>
+<a href="{% url 'buy' i.id %}" class="">BUY NOW</a>
+{% endfor %}
+{% else %}
+
+<h2>NOT FOUND.....</h2>
+{% endif %}
+</h2>
